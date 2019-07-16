@@ -22,27 +22,27 @@ class Shopping_Cart():
             return 'That item isn\'t in your cart.' 
 
 
-    def calculate_price_before_tax(self):
-        price = 0
+    # def calculate_price_before_tax(self):
+    #     price = 0
         
-        for product in self.products:
-            price += product.base_price
+    #     for product in self.products:
+    #         price += product.base_price
 
-        return price
+    #     return price
 
 
-    def calculate_tax(self):
-        tax = 0
+    # def calculate_tax(self):
+    #     tax = 0
 
-        for product in self.products:
-            tax += product.base_price * product.tax_rate
+    #     for product in self.products:
+    #         tax += product.base_price * product.tax_rate
 
-        return tax
+    #     return tax
 
 
     def display_cart(self):
         for product in self.products:
-            print(f'-{product.name} - ${product.base_price} - {product.tax_rate}%')
+            print(f'-{product.name} - ${product.base_price} - {product.tax_rate}% -- {product.calculate_tax()} - {product.calculate_price_after_tax()}')
 
 
     def calculate_price_after_tax(self):
@@ -59,14 +59,14 @@ class Shopping_Cart():
         self.display_cart()
         print()
 
-        price = self.calculate_price_before_tax()
-        tax = self.calculate_tax()
-        total = self.calculate_price_after_tax()
+        # price = self.calculate_price_before_tax()
+        # tax = self.calculate_tax()
+        # total = self.calculate_price_after_tax()
 
-        print('Cost of items: ${:,.2f}'.format(price))
-        print('Cost of taxes: +${:,.2f}'.format(tax))
+        # print('Cost of items: ${:,.2f}'.format(price))
+        # print('Cost of taxes: +${:,.2f}'.format(tax))
         
-        print('TOTAL: ${:,.2f}'.format(total))
+        # print('TOTAL: ${:,.2f}'.format(total))
 
 
 
