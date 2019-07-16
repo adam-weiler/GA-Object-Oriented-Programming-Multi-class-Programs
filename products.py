@@ -7,14 +7,14 @@ class Product():
     def total_price(self):
         return self.base_price + (self.base_price * self.tax_rate)
 
-computer = Product('Computer', 1500, .15)
+# computer = Product('Computer', 1500, .15)
 # print(computer.name)
 
-television = Product('Television', 2500, .20)
+# television = Product('Television', 2500, .20)
 # print(television.name)
 
-oculus_rift = Product('Oculus Rift', 999, .14)
+# oculus_rift = Product('Oculus Rift', 999, .14)
 # print(oculus_rift.name)
 
-iPhone = Product('iPhone', 800, .13)
+# iPhone = Product('iPhone', 800, .13)
 # print(iPhone.name)
