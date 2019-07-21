@@ -1,6 +1,6 @@
 tax_classification_system = { 'standard':.13, 'tax-exempt':0, 'imported':.25 }
 
-class Product(): #A Product class.
+class Product():
     def __init__(self, name, base_price, tax_rate): #Every Product has attributes name, base_price, and tax_rate.
         self.name = name
         self.base_price = base_price
