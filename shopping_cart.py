@@ -11,7 +11,7 @@ class Shopping_Cart():
 
     def add_to_cart(self, product, quantity):
 
-        if quantity > 1:
+        if quantity >= 1:
             for num in range(1, quantity+1):
                 self.products.append(product)
 
@@ -25,6 +25,7 @@ class Shopping_Cart():
             return f'{product.name} removed from cart!'
         else:
             return 'That item isn\'t in your cart.'
+
 
 
 
@@ -44,7 +45,7 @@ class Shopping_Cart():
             return f'Your cart is empty.'
 
 
-    
+
 
     def display_cart(self):
         for product in self.products:
@@ -88,59 +89,58 @@ class Shopping_Cart():
 
 
 
-
-
-
 #Instantiate each Product class.
-computer = Product('Computer', 1500, .15)
-television = Product('Television', 2500, .20)
-oculus_rift = Product('Oculus Rift', 999, .14)
-iPhone = Product('Apple iPhone', 800, .13)
+computer = Product('Computer', 1500, 'standard')
+television = Product('Television', 2500, 'standard')
+oculus_rift = Product('Oculus Rift', 999, 'imported')
+iPhone = Product('Apple iPhone', 800, 'imported')
+mouse_pad = Product('Mouse Pad', 5, 'tax-exempt')
 
 
 
-# #Instantiate each Shopping_Cart class.
-# bobs_cart = Shopping_Cart('Bob')
+#Instantiate each Shopping_Cart class.
+bobs_cart = Shopping_Cart('Bob')
 
-# #Adding items to cart.
-# print(bobs_cart.add_to_cart(computer, 1))
-# print(bobs_cart.add_to_cart(television, 1))
-# print(bobs_cart.add_to_cart(oculus_rift, 1))
-# print(bobs_cart.add_to_cart(iPhone, 3))
+#Adding items to cart.
+print(bobs_cart.add_to_cart(computer, 1))
+print(bobs_cart.add_to_cart(television, 1))
+print(bobs_cart.add_to_cart(oculus_rift, 1))
+print(bobs_cart.add_to_cart(iPhone, 3))
+print(bobs_cart.add_to_cart(mouse_pad, 1))
+print()
+
+print(bobs_cart.most_expensive_product_in_cart())
+print()
+
+#Display all items in bobs_cart.
+bobs_cart.display_total()
+print('\n\n')
+
+
+
+#Instantiate each Shopping_Cart class.
+billys_cart = Shopping_Cart('Billy')
+
+#Adding items to cart.
+print(billys_cart.add_to_cart(computer, 1))
+print(billys_cart.add_to_cart(computer, 1))
+print(billys_cart.add_to_cart(computer, 1))
+print(billys_cart.add_to_cart(television, 1))
+print(billys_cart.add_to_cart(oculus_rift, 3))
+print(billys_cart.add_to_cart(iPhone, 1))
 # print()
 
-# print(bobs_cart.most_expensive_product_in_cart())
+print(billys_cart.remove_from_cart(television)) #Television removed.
+print(billys_cart.remove_from_cart(television)) #That item isn't in your cart.
+print(billys_cart.remove_from_cart(television))
 # print()
 
-# #Display all items in bobs_cart.
-# bobs_cart.display_total()
-# print('\n\n')
+print(billys_cart.most_expensive_product_in_cart())
+print()
 
-
-
-# #Instantiate each Shopping_Cart class.
-# billys_cart = Shopping_Cart('Billy')
-
-# #Adding items to cart.
-# print(billys_cart.add_to_cart(computer, 1))
-# print(billys_cart.add_to_cart(computer, 1))
-# print(billys_cart.add_to_cart(computer, 1))
-# print(billys_cart.add_to_cart(television, 1))
-# print(billys_cart.add_to_cart(oculus_rift, 3))
-# print(billys_cart.add_to_cart(iPhone, 1))
-# # print()
-
-# print(billys_cart.remove_from_cart(television)) #Television removed.
-# print(billys_cart.remove_from_cart(television)) #That item isn't in your cart.
-# print(billys_cart.remove_from_cart(television))
-# # print()
-
-# print(billys_cart.most_expensive_product_in_cart())
-# print()
-
-# #Display all items in billys_cart.
-# billys_cart.display_total()
-# print('\n\n')
+#Display all items in billys_cart.
+billys_cart.display_total()
+print('\n\n')
 
 
 
