@@ -4,6 +4,10 @@ class Product(): #A Product class.
         self.base_price = base_price
         self.tax_rate = tax_rate
 
+
+        #Replace self.tax_rate with tax classification system.
+
+
     def calculate_tax(self):
         return self.base_price * self.tax_rate
     
